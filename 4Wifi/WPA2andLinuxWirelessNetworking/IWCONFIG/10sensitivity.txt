@@ -1,0 +1,7 @@
+sens
+Set the sensitivity threshold. This define how sensitive is the card to poor operating conditions (low signal, interference). Positive values are assumed to be the raw value used by the hardware or a percentage, negative values are assumed to be dBm. Depending on the hardware implementation, this parameter may control various functions.
+On modern cards, this parameter usually control handover/roaming threshold, the lowest signal level for which the hardware remains associated with the current Access Point. When the signal level goes below this threshold the card starts looking for a new/better Access Point. Some cards may use the number of missed beacons to trigger this. For high density of Access Points, a higher threshold make sure the card is always associated with the best AP, for low density of APs, a lower threshold minimise the number of failed handoffs.
+On more ancient card this parameter usually controls the defer threshold, the lowest signal level for which the hardware considers the channel busy. Signal levels above this threshold make the hardware inhibits its own transmission whereas signals weaker than this are ignored and the hardware is free to transmit. This is usually strongly linked to the receive threshold, the lowest signal level for which the hardware attempts packet reception. Proper setting of these thresholds prevent the card to waste time on background noise while still receiving weak transmissions. Modern designs seems to control those thresholds automatically.
+Example :
+iwconfig eth0 sens -80
+iwconfig eth0 sens 2

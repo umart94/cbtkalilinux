@@ -1,0 +1,9 @@
+"Security Mode" here is kind of a misnomer dating back to legacy pre-802.11i (RSN) security methods. Initially there were only 2 types of security mechanisms: preshared key (WEP) and Open System Authentication (no authentication) that took place on the first exchange between an access point and the client devices. "Restricted" means legacy preshared key is used.  "Open" means Open System Authentication (OSA) is being used.
+
+ 
+
+OSA is the first step in joining a BSS (cell) in modern Wi-Fi networks. It is simply an exchange of hellos between the two stations and essentially the same as plugging a cable in an Ethernet port. Security is handled by other mechanisms layered on top of that to authenticate client devices and generate dynamic encryption keys using the 4-way handshake. Those methods are what we know as WPA-PSK and WPA-Enterprise.
+
+ 
+
+So to summarize, other than the confusing terminology there's no problem here.

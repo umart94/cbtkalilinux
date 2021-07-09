@@ -1,0 +1,8 @@
+ap
+Force the card to register to the Access Point given by the address, if it is possible. This address is the cell identity of the Access Point, as reported by wireless scanning, which may be different from its network MAC address. If the wireless link is point to point, set the address of the other end of the link. If the link is ad-hoc, set the cell identity of the ad-hoc network.
+When the quality of the connection goes too low, the driver may revert back to automatic mode (the card selects the best Access Point in range).
+You may also use off to re-enable automatic mode without changing the current Access Point, or you may use any or auto to force the card to reassociate with the currently best Access Point.
+Example :
+iwconfig eth0 ap 00:60:1D:01:23:45
+iwconfig eth0 ap any
+iwconfig eth0 ap off

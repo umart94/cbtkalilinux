@@ -1,0 +1,16 @@
+key/enc[ryption]
+Used to manipulate encryption or scrambling keys and security mode.
+To set the current encryption key, just enter the key in hex digits as XXXX-XXXX-XXXX-XXXX or XXXXXXXX. To set a key other than the current key, prepend or append [index] to the key itself (this won't change which is the active key). You can also enter the key as an ASCII string by using the s: prefix. Passphrase is currently not supported.
+To change which key is the currently active key, just enter [index] (without entering any key value).
+off and on disable and reenable encryption.
+The security mode may be open or restricted, and its meaning depends on the card used. With most cards, in open mode no authentication is used and the card may also accept non-encrypted sessions, whereas in restricted mode only encrypted sessions are accepted and the card will use authentication if available.
+If you need to set multiple keys, or set a key and change the active key, you need to use multiple key directives. Arguments can be put in any order, the last one will take precedence.
+Examples :
+iwconfig eth0 key 0123-4567-89
+iwconfig eth0 key [3] 0123-4567-89
+iwconfig eth0 key s:password [2]
+iwconfig eth0 key [2]
+iwconfig eth0 key open
+iwconfig eth0 key off
+iwconfig eth0 key restricted [3] 0123456789
+iwconfig eth0 key 01-23 key 45-67 [4] key [4]

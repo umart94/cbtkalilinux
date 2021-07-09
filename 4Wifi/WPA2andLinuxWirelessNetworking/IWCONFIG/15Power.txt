@@ -1,0 +1,11 @@
+power
+Used to manipulate power management scheme parameters and mode.
+To set the period between wake ups, enter period 'value'. To set the timeout before going back to sleep, enter timeout 'value'. To set the generic level of power saving, enter saving 'value'. You can also add the min and max modifiers. By default, those values are in seconds, append the suffix m or u to specify values in milliseconds or microseconds. Sometimes, those values are without units (number of beacon periods, dwell, percentage or similar).
+off and on disable and reenable power management. Finally, you may set the power management mode to all (receive all packets), unicast (receive unicast packets only, discard multicast and broadcast) and multicast (receive multicast and broadcast only, discard unicast packets).
+Examples :
+iwconfig eth0 power period 2
+iwconfig eth0 power 500m unicast
+iwconfig eth0 power timeout 300u all
+iwconfig eth0 power saving 3
+iwconfig eth0 power off
+iwconfig eth0 power min period 2 power max period 4

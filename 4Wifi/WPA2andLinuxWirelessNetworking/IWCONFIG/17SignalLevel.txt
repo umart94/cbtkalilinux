@@ -1,0 +1,2 @@
+Signal level
+Received signal strength (RSSI - how strong the received signal is). May be arbitrary units or dBm, iwconfig uses driver meta information to interpret the raw value given by /proc/net/wireless and display the proper unit or maximum value (using 8 bit arithmetic). In Ad-Hoc mode, this may be undefined and you should use iwspy.

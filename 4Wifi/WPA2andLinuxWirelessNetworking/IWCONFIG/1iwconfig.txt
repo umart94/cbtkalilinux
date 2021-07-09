@@ -1,0 +1,12 @@
+iwconfig(8) - Linux man page
+Name
+iwconfig - configure a wireless network interface
+Synopsis
+iwconfig [interface]
+iwconfig interface [essid X] [nwid N] [mode M] [freq F]
+[channel C][sens S ][ap A ][nick NN ]
+[rate R] [rts RT] [frag FT] [txpower T]
+[enc E] [key K] [power P] [retry R]
+[modu M] [commit]
+iwconfig --help
+iwconfig --version

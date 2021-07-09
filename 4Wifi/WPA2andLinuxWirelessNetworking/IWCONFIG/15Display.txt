@@ -1,0 +1,9 @@
+Display
+For each device which supports wireless extensions, iwconfig will display the name of the MAC protocol used (name of device for proprietary protocols), the ESSID (Network Name), the NWID, the frequency (or channel), the sensitivity, the mode of operation, the Access Point address, the bit-rate, the RTS threshold, the fragmentation threshold, the encryption key and the power management settings (depending on availability).
+The parameters displayed have the same meaning and values as the parameters you can set, please refer to the previous part for a detailed explanation of them.
+Some parameters are only displayed in short/abbreviated form (such as encryption). You may use iwlist(8) to get all the details.
+Some parameters have two modes (such as bitrate). If the value is prefixed by '=', it means that the parameter is fixed and forced to that value, if it is prefixed by ':', the parameter is in automatic mode and the current value is shown (and may change).
+
+Access Point/Cell
+An address equal to 00:00:00:00:00:00 means that the card failed to associate with an Access Point (most likely a configuration issue). The Access Point parameter will be shown as Cell in ad-hoc mode (for obvious reasons), but otherwise works the same.
+If /proc/net/wireless exists, iwconfig will also display its content. Note that those values will depend on the driver and the hardware specifics, so you need to refer to your driver documentation for proper interpretation of those values.

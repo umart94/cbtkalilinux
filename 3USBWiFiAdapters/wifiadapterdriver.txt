@@ -1,0 +1,21 @@
+vmware virtual box virtualize pci devices
+
+we can use the built in wireless 
+
+but for packet sniffing and injection we have to use a seperate USB WiFi Adapter.
+that will connect to virtual machine directly.
+
+enable the setting : connect any usb that connects to this machine directly to vmware
+instead of connecting first to host to avoid errors.
+
+if
+
+You have 2 versions of the same driver loaded. That doesn't work.
+
+r8188eu is lwfinger's standalone driver (a bit old too) which comes with kernels upstream
+
+8188eu is our (aircrack-ng) and also newer then the other. The driver has monitor mode, frame injection, MESH support etc. See README.md.
+
+According to our README.md, you need to blacklist the older "standalone" driver (by lwfinger) by adding a .conf file in /etc/modprobe.d (e.g: echo r8188eu > /etc/modprobe.d/realtek.conf) and then reboot in order to unload/blacklist it (or modprobe -r 8188eu)
+
+Our drivers support a wide range of kernels and are heavily maintained. As of now, it supports the latest, v5.3+.

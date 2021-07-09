@@ -1,0 +1,3 @@
+managed
+monitor
+promiscuous

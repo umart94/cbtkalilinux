@@ -1,0 +1,70 @@
+go to etc/network/
+
+sudo nano interfaces
+
+  GNU nano 5.3                                                             interfaces                                                                      
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+auto eth0
+allow-hotplug eth0
+iface eth0 inet static
+address 192.168.100.109
+netmask 255.255.255.0
+broadcast 192.168.100.255
+network 192.168.100.0
+gateway 192.168.100.1
+dns-nameserver 192.168.100.1
+
+iface eth0 inet static
+address 192.168.100.109
+netmask 255.255.255.0
+gateway 192.168.100.1
+
+next, go to etc/NetworkManager/NetworkManager.conf
+change managed to true.
+
+[main]
+plugins=ifupdown,keyfile
+
+[ifupdown]
+managed=true
+
+
+
+now restart network manager
+
+
+
+sudo /etc/init.d/networking stop
+sudo /etc/init.d/networking start
+sudo systemctl restart networking
+
+
+
+sudo systemctl restart NetworkManager.service
+sudo systemctl stop NetworkManager.service
+sudo systemctl start NetworkManager.service
+
+
+
+set default gateway
+sudo route add default gw 192.168.100.1 eth0
+
+
+
+
+
+
+
+
+
+
+
+

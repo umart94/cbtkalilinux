@@ -1,0 +1,24 @@
+https://unix.stackexchange.com/users/33265/flup
+You can check what the access point is broadcasting in its beacons by doing this (you'll need the wireless-tools package):
+
+$ sudo iwlist wlan0 scanning
+The output varies by device, and will display every SSID the interface can see. My WPA2 access point gives this (from iwlist's very verbose output):
+
+IE: IEEE 802.11i/WPA2 Version 1
+    Group Cipher : TKIP
+    Pairwise Ciphers (2) : CCMP TKIP
+    Authentication Suites (1) : PSK
+You can also interrogate wpa_supplicant directly, which might be more what you're after:
+
+$ sudo wpa_cli status
+Selected interface 'wlan0'
+bssid=c8:d7:19:01:02:03
+ssid=whatever-SSID-you-are-using
+id=0
+mode=station
+pairwise_cipher=CCMP
+group_cipher=TKIP              <-- cipher
+key_mgmt=WPA2-PSK              <-- key mode
+wpa_state=COMPLETED
+ip_address=10.20.30.4
+address=88:53:2e:01:02:03

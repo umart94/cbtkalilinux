@@ -1,0 +1,9 @@
+essid
+Set the ESSID (or Network Name - in some products it may also be called Domain ID). The ESSID is used to identify cells which are part of the same virtual network.
+As opposed to the AP Address or NWID which define a single cell, the ESSID defines a group of cells connected via repeaters or infrastructure, where the user may roam transparently.
+With some cards, you may disable the ESSID checking (ESSID promiscuous) with off or any (and on to reenable it).
+If the ESSID of your network is one of the special keywords (off, on or any), you should use -- to escape it.
+Examples :
+iwconfig eth0 essid any
+iwconfig eth0 essid "My Network""
+iwconfig eth0 essid -- "ANY""

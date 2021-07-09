@@ -1,0 +1,10 @@
+whenever you see a WiFi Network with WPA2 : 
+
+it uses CCMP and TKIP.
+
+Counter Mode Cipher Block Chaining Message Authentication Code Protocol (Counter Mode CBC-MAC Protocol) or CCM mode Protocol (CCMP) is an encryption protocol designed for Wireless LAN products that implements the standards of the IEEE 802.11i amendment to the original IEEE 802.11 standard. CCMP is an enhanced data cryptographic encapsulation mechanism designed for data confidentiality and based upon the Counter Mode with CBC-MAC (CCM mode) of the Advanced Encryption Standard (AES) standard.[1] It was created to address the vulnerabilities presented by Wired Equivalent Privacy (WEP), a dated, insecure protocol.[1]
+
+
+TKIP is actually quite similar to WEP encryption. TKIP is no longer considered secure, and is now deprecated. In other words, you shouldn’t be using it.
+
+AES is a more secure encryption protocol introduced with WPA2

@@ -1,0 +1,65 @@
+When you are connected to WiFi, your card runs in managed mode. When you switch to monitor mode you start passively and not actively treating signals and hence you lose the connection.
+
+Not every NIC supports both managed & monitor modes, but most of the Atheros chips do.
+
+when we run in managed mode, the wireless card will receive or monitor all traffic from available wireless networks.
+
+
+sudo iwconfig wlan1 mode monitor
+sudo iwconfig wlan1 mode managed
+
+sudo iwconfig.
+
+must show Mode:monitor, while capturing traffic.
+
+
+
+Ok , so when you use managed mode, its just like when we capture traffic from the ethernet in wireshark ( talking about wireshark only first here)
+
+Ehternet wireshark  - we have to connect to ethernet directly, and choose interface from wireshark screen..
+
+similiarly in wifi usb adapter managed mode, we have to connect to the wifi interface directly in wireshark and it just displays traffic ON THE WIFI INTERFACE WE ARE CONNECTED TO ON THE VIRTUAL MACHINE OS.
+
+i.e it will use THE SAME CONFIGURATION AS THE VM OPERATING SYSTEM.
+THIS CONFIGURATION WILL BE FIXED FOR THE SESSION.
+
+so the changing of the channels and wireless parameters etc. will not be observed..
+
+similiarly packets cannot be observed.
+
+
+this Is sort of like an active connection...
+
+
+when we connect the usb wifi adatper in monitor mode, then and use
+some other capturing tool such as airmon.
+
+
+then aircrack - airodump 
+
+sudo airodump-ng mon0
+
+we don't have to connect to the network !!!
+and the traffic is grabbed ( all of the wireless packets are grabbed)
+we are not even connected to a network.
+
+
+this will capture 
+BSSID
+PWR
+Beacons
+#Data
+#/s
+CH
+MB
+ENC
+CIPHER
+AUTH
+ESSID
+STATION
+PWR
+RATE
+LOST
+PACKETS
+PROBES
+

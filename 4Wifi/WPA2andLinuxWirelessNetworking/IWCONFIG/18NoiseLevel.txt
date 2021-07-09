@@ -1,0 +1,2 @@
+Noise level
+Background noise level (when no packet is transmitted). Similar comments as for Signal level.

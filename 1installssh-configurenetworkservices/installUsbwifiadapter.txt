@@ -1,0 +1,107 @@
+step1. verify your linux kernel version
+
+uname -r
+5.8.0-kali3-amd64
+
+
+step2. verify your gcc compiler version
+
+kali@kali:~$ gcc --version
+gcc (Debian 10.2.0-13) 10.2.0
+Copyright (C) 2020 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+step 3. install the usb wifi adapter driver
+
+extract the driver zip file.
+make sure you download the original zip file, and not some modified zip file.
+
+afterwards.
+
+go to root dir of driver
+
+run
+
+sudo make clean
+
+it gives error that , bc: not found.
+
+now we have to install bc in kali linux.
+
+
+GNU bc arbitrary precision calculator language follows the POSIX 1003.2 draft standard, with several extensions including multi-character variable names, an `else' statement and full Boolean expressions. GNU bc does not require the separate GNU dc program.
+
+run sudo make clean again.
+
+it should not give any errors or warnings.
+
+run sudo make
+it gives us this error : 
+
+make ARCH=x86_64 CROSS_COMPILE= -C /lib/modules/5.8.0-kali3-amd64/build M=/home/kali/Downloads/tplink  modules
+make[1]: *** /lib/modules/5.8.0-kali3-amd64/build: No such file or directory.  Stop.
+make: *** [Makefile:1911: modules] Error 2
+
+we need to install linux headers.
+
+
+run sudo apt update
+
+run
+
+sudo apt-cache search linux-headers
+
+install the linux headers according to the error / linux kernel we have
+
+
+sudo apt-get install linux-headers-5.8.0-kali3-amd64
+
+install linux-image
+
+sudo apt-get install linux-image-5.8.0-kali3-amd64
+
+
+
+
+
+
+
+The package linux-headers-4.6.0-kali1-amd64 is no longer available on the regularly kali-linux repository, it should be upgraded to the 4.8.x version.
+
+update your /etc/apt/sources.list : see Kali sources.list Repositories
+
+List the available linux-headers and linux-image through apt-cache search :
+
+apt update 
+apt-cache search linux-headers
+Then install the correct package e,g ( this is an example , it depends on the previous output command) :
+
+apt-get install linux-headers-4.8.0-kali1-amd64
+also run;
+
+apt-cache search linux-image
+install it:
+
+apt-get install linux-image-4.8.0-kali1-amd64
+Reboot your system.
+
+Or you can use the following command to upgrade you kernel to the latest available version and install the appropriate kernel headers:
+
+apt update
+apt dist-upgrade
+reboot
+apt install linux-headers-$(uname -r)
+
+
+
+
+
+It installs linux headers which are required to upgrade kernel
+
+
+sudo dpkg-query -s linux-headers-$(uname -r)
+
+
+

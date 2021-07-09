@@ -1,0 +1,9 @@
+IDENTIFIER  IEEE 802 IDENTIFIER  ESSID:"SSID"  Nickname:"NICKNAME"
+          Mode:Managed  Frequency:2.462 GHz  Access Point:MACADDRESS    
+          Bit Rate:72.2 Mb/s   Sensitivity:0/0  
+          Retry:off   RTS thr:off   Fragment thr:off
+          EncryptionKey : Security mode:open
+          Power Management:off
+          Link Quality=100/100  Signal level=100/100  Noise level=0/100
+          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+          Tx excessive retries:0  Invalid misc:0   Missed beacon:0

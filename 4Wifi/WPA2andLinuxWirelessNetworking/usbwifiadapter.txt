@@ -1,0 +1,37 @@
+DO NOT CONNECT THE USB WIFI ADAPTER IN USB 3 , SUPER SPEED PORTS
+connect it to the black USB port.
+otherwise it will not work and give bsod
+
+
+the usb wifi adapter works on older linux kernels due to firmware and driver issues... so choose the linux operating system according to the documentation..
+
+in our case, its ubuntu 16.4.4
+tp link 725n..
+
+any other adapter and any other linux can work, but 
+we are using this config.
+
+open vmware in host pc in standard user
+wait for vm to turn on
+disconnect from ethernet.
+
+connect usb wifi adapter in vm
+
+choose option : connect this usb device to virtual machine.
+
+The device 'Realtek 802.11n NIC' was unable to connect to its ideal host controller. An attempt will be made to connect this device to the best available host controller. This might result in undefined behavior for this device.
+
+
+connection activation failed (24) Timeout was reached
+
+
+this happens because virtual machine configured ethernet to be used
+instead of wifi, and because network manager has an issue with entering passwords,
+
+so what we can do is that
+
+unplug the usb wifi adapter,
+stop network manager and networking services.
+restart the network manager services
+
+then the usb wifi adapter will work.

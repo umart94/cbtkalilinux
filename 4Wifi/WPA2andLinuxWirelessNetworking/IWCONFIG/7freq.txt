@@ -1,0 +1,10 @@
+freq/channel
+Set the operating frequency or channel in the device. A value below 1000 indicates a channel number, a value greater than 1000 is a frequency in Hz. You may append the suffix k, M or G to the value (for example, "2.46G" for 2.46 GHz frequency), or add enough '0'.
+Channels are usually numbered starting at 1, and you may use iwlist(8) to get the total number of channels, list the available frequencies, and display the current frequency as a channel. Depending on regulations, some frequencies/channels may not be available.
+When using Managed mode, most often the Access Point dictates the channel and the driver may refuse the setting of the frequency. In Ad-Hoc mode, the frequency setting may only be used at initial cell creation, and may be ignored when joining an existing cell.
+You may also use off or auto to let the card pick up the best channel (when supported).
+Examples :
+iwconfig eth0 freq 2422000000
+iwconfig eth0 freq 2.422G
+iwconfig eth0 channel 3
+iwconfig eth0 channel auto

@@ -1,0 +1,7 @@
+nwid
+Set the Network ID. As all adjacent wireless networks share the same medium, this parameter is used to differentiate them (create logical colocated networks) and identify nodes belonging to the same cell.
+This parameter is only used for pre-802.11 hardware, the 802.11 protocol uses the ESSID and AP Address for this function.
+With some cards, you may disable the Network ID checking (NWID promiscuous) with off (and on to reenable it).
+Examples :
+iwconfig eth0 nwid AB34
+iwconfig eth0 nwid off

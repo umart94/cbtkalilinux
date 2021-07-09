@@ -1,0 +1,16 @@
+always run vmware.exe as the user you have logged on, don't run it as admin
+
+the explorer.exe file in windows  will run as the current user, so there is a mismatch.
+
+and we cannot drag and drop or copy and paste files / text this way..
+
+if we run vmware.exe without run as administrator ( right click exe properties.
+deselect run as administrator, then we can copy and paste and drag and drop )
+
+also
+
+in vmware in guest isolation settings :
+enable drag and drop
+enable copy and paste
+
+

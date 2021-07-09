@@ -1,0 +1,38 @@
+on desktop pc, static ip causes issues due to using usb wifi adapter with guest virtual machine
+
+the driver can have issues
+the static ip has issues with virtual machine and firewall
+
+instead,
+
+use laptop for wireless network analysis. and seperate virtual machine.
+
+
+troubleshoot static ip issues:
+
+after setting static ip
+
+run
+
+ifconfig 192.168.100.109/24 up
+
+ifconfig eth0
+
+route add default gw 192.168.100.1
+
+we need to tell the OS to use this router gateway to go to external networks.
+
+/etc/resolv.conf
+
+must have the 
+
+nameserver 192.168.100.1
+
+update-rc.d networking defaults
+
+after updating static ip , device boots slower, so create snapshots of vm if there are issues.
+
+otherwise just use dhcp.
+
+update-rc.d -f ssh defaults
+

@@ -1,0 +1,66 @@
+VMNet0
+VMNet1
+VMNet2
+and so on..
+
+these are virtual network adapters in windows 10 host OS.
+windows 10 needs admin privilege to configure these virtual network adapters.
+
+we need to allow vmware.exe app through the Windows Firewall if we run it in
+non-admin, standard user mode.
+
+also at 1 time , if bridged mode is enabled, and you have also previously used the
+NAT network adapter or host only adapter and it was enabled. the virtual machine and
+virtual network manager assigns those ips to the virtual machine. through the router.
+
+so inorder to fix this,
+
+1. disable the virtual network adapters for NAT and host mode.
+2. delete the devices through the router.
+3. shut down the virtual machine
+4. configure virtual machine network adapter mode ( through vmware)
+5. turn virtual machine on
+
+if the virtual machine still does not connect to the internet then : 
+
+for e.g it gets ip from router, as well as the mac address, then
+
+shut down virtual machine
+shut down vmware
+shut down the router.
+
+restart host os
+restart router
+restart vmware
+start the virtual machine in A SINGLE NETWORK ADAPTER MODE. ( either bridged, or NAT or hostonly)
+
+
+then check for the internet connectivity.
+
+if it still does not work
+
+then the antivirus and firewall programs are blocking the access.
+so either allow vmware.exe file through firewall.
+
+or run all programs as administrator.
+
+
+( Windows explorer does not run has administrator ( as well as other programs )
+
+so we have to run an elevated powershell window in windows os
+and run whatever program we need to copy paste from or drag and drop from
+
+and then copy paste to the virtual machine )
+
+
+
+for another haseen BSOD,
+see this
+
+https://communities.vmware.com/thread/194397
+
+
+VMWare also causes issues with any unknown drivers
+any USB virtual adapters.
+
+( basically delete windows and boot linux directly ) :|

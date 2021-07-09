@@ -1,0 +1,23 @@
+when we enable shared folders, in some OS vm it will show up as mounted folder.
+
+but if it does not ( e.g kali linux then)
+
+first enable and add a shared folder ( dont set it as read only , set it as always enabled)
+
+
+and always open vmware.exe as the windows / host user account you have logged into.
+
+According to this the shared folder on the guest is supposed to appear in /mnt/hgfs but the last folder was missing on my system. Open a terminal window in the guest, and create the missing folder:
+cd /mnt
+sudo mkdir hgfs
+
+sudo mount -t fuse.vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other
+
+My way of solving this issue is to resort to vmhgfs-fuse installed with open-vm-tools.
+
+Either mount locally using vmhgfs-fuse .host:/$(vmware-hgfsclient) ~/some_mountpoint or globally using sudo mount -t fuse.vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other. To then make mounting globally persistent add the following line to your /etc/fstab:
+
+.host:/ /mnt/hgfs fuse.vmhgfs-fuse allow_other 0 0
+
+will show up at : 
+/mnt/hgfs/NAMEOFSHAREDFOLDER/

@@ -1,0 +1,8 @@
+txpower
+For cards supporting multiple transmit powers, sets the transmit power in dBm. If W is the power in Watt, the power in dBm is P = 30 + 10.log(W). If the value is postfixed by mW, it will be automatically converted to dBm.
+In addition, on and off enable and disable the radio, and auto and fixed enable and disable power control (if those features are available).
+Examples :
+iwconfig eth0 txpower 15
+iwconfig eth0 txpower 30mW
+iwconfig eth0 txpower auto
+iwconfig eth0 txpower off

@@ -1,0 +1,3 @@
+commit
+Some cards may not apply changes done through Wireless Extensions immediately (they may wait to aggregate the changes or apply it only when the card is brought up via ifconfig). This command (when available) forces the card to apply all pending changes.
+This is normally not needed, because the card will eventually apply the changes, but can be useful for debugging.

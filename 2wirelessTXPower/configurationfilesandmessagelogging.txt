@@ -1,0 +1,28 @@
+tail -f -n 0 /var/log/messages
+
+iw - configures wireless
+
+ifconfig wlan0 down
+ifconfig wlan0 up
+
+iw reg set US ( dBm levels )
+
+iwconfig
+
+
+iwconfig wlan0 txpower 27 ( increase transmitting power )
+
+iw reg set BO
+
+iwconfig wlan0 txpower 28
+
+if we increase the power the wlan device would heat up and device wont work.
+
+iwconfig wlan0 txpower 20
+ifconfig wlan0 up
+iw reg set US
+ifconfig wlan0
+
+
+
+

@@ -1,0 +1,46 @@
+tx power levels set in dBm
+configuring country code
+configuring the level.
+
+1 station will 1 single frequency
+
+if we want to increase the wifi signal
+the maximum limit in USA is 
+
+27 dBm = 500 milliW
+30 dBm = 1.0 watt
+During April 2016, Pakistan’s Telecommunication Authority (PTA) published a new notification S.R.O 287(I) 2016 for WiFi device usage. Changes to the 2.4 GHz and 5.8 GHz ISM Bands are as follows:
+
+·         The 2.4 GHz Band is now fully open; it was previously restricted to 2.4735-2.4835 GHz only. Maximum Permitted Output Power is 30 dBm EIRP.
+
+·         The output power for the 5.725‑5.875 GHz band has been increased from 20 dBm EIRP to 30 dBm EIRP.
+
+ 
+
+Additionally, PTA recently confirmed that all the standalone RFID and NFC have been exempted from type approval.
+
+Under the new requirement,  PTA will approve mobile phones according to the standards listed below:
+
+Radio Communication Standards
+
+EN 301 511: V7.0.2
+EN 301 908-1/ EN 301 908-2
+Electromagnetic Compatibility Standards
+
+EN 301 489-01: v1.3.1 / v1.4.1
+EN 301 489-07: v1.1.1 / v1.2.1
+Safety Standards (including SAR test)
+
+EN 50360 / CENELEC
+EN 50361 / CENELEC
+EN 60950
+EN 62209-1: 2005
+
+
+
+
+
+
+configure country code to something else. determines maximum dBm
+
+

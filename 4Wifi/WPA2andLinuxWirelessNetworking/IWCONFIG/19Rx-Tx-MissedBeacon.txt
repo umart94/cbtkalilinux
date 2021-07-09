@@ -1,0 +1,12 @@
+Rx invalid nwid
+Number of packets received with a different NWID or ESSID. Used to detect configuration problems or adjacent network existence (on the same frequency).
+Rx invalid crypt
+Number of packets that the hardware was unable to decrypt. This can be used to detect invalid encryption settings.
+Rx invalid frag
+Number of packets for which the hardware was not able to properly re-assemble the link layer fragments (most likely one was missing).
+Tx excessive retries
+Number of packets that the hardware failed to deliver. Most MAC protocols will retry the packet a number of times before giving up.
+Invalid misc
+Other packets lost in relation with specific wireless operations.
+Missed beacon
+Number of periodic beacons from the Cell or the Access Point we have missed. Beacons are sent at regular intervals to maintain the cell coordination, failure to receive them usually indicates that the card is out of range.

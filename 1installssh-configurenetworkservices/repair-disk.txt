@@ -1,0 +1,1 @@
+At the (initramfs) prompt, type fsck -f /dev/sda1 to check/repair your file system.

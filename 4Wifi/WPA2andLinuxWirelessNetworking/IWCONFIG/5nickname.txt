@@ -1,0 +1,4 @@
+nick[name]
+Set the nickname, or the station name. Some 802.11 products do define it, but this is not used as far as the protocols (MAC, IP, TCP) are concerned and completely useless as far as configuration goes. Only some wireless diagnostic tools may use it.
+Example :
+iwconfig eth0 nickname "My Linux Node""

@@ -1,0 +1,29 @@
+By default, vmware uses memory settings in multiples of 4MB.
+
+if we have 16GB RAM. then memory swapping will occur beyond the 13.4 gb size limit.
+
+
+This will give the BSOD, page fault in non paged area.
+
+the solution is to set and allocate only physical memory and RAM to vmware,
+and not allow the memory swapping.
+
+also keep number of processors to 1, and number of cores to 1.
+
+
+to disable vmware swapping memory , go to preferences -> memory.
+
+
+We dont need Virtual CD DVD
+we dont need virtual usb adapter
+we only have to use single network adapter
+
+run vmware in standard user mode.
+keep vmware on single monitor screen while doing drag drop / copy paste.
+
+fix all physical memory before startup.
+
+
+
+
+
